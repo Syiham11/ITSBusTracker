@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarMap"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageButton
+            android:layout_width="15dp"
+            android:layout_height="18dp"
+            android:src="@drawable/btn_up"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="20dp"
+            android:onClick="upHandler"/>
+
+        <TextView
+            android:id="@+id/titleMap"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/title_activity_maps"
+            android:textColor="#ffffff"
+            android:textSize="26sp"
+            android:gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="mobile.maps.itsbustracker.MapsActivity"
+        map:uiCompass="true"
+        map:uiZoomControls="true"
+        map:cameraZoom="17" />
+
+</LinearLayout>
